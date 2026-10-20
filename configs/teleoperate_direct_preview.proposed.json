@@ -1,0 +1,26 @@
+{
+  "robot": {
+    "type": "so101_follower",
+    "port": "/dev/serial/by-id/usb-1a86_USB_Single_Serial_5AB9065574-if00",
+    "id": "my_awesome_follower_arm",
+    "calibration_dir": "/home/pangk/workspaces/so101-training/data/calibration/robots/so_follower",
+    "use_degrees": true,
+    "max_relative_target": null,
+    "disable_torque_on_disconnect": true,
+    "position_p_coefficient": 16,
+    "position_i_coefficient": 0,
+    "position_d_coefficient": 32,
+    "cameras": {}
+  },
+  "teleop": {
+    "type": "so101_leader",
+    "port": "/dev/serial/by-id/usb-1a86_USB_Single_Serial_5B79050214-if00",
+    "id": "my_awesome_leader_arm",
+    "calibration_dir": "/home/pangk/workspaces/so101-training/data/calibration/teleoperators/so_leader",
+    "use_degrees": true
+  },
+  "fps": 30,
+  "display_data": false,
+  "display_mode": "rerun",
+  "display_compressed_images": false
+}

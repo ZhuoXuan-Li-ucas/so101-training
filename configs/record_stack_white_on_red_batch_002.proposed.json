@@ -1,0 +1,89 @@
+{
+  "recording": {
+    "robot": {
+      "type": "so101_follower",
+      "port": "/dev/serial/by-id/usb-1a86_USB_Single_Serial_5AB9065574-if00",
+      "id": "my_awesome_follower_arm",
+      "calibration_dir": "/home/pangk/workspaces/so101-training/data/calibration/recalibration-20261014-152423-manual/follower",
+      "use_degrees": true,
+      "max_relative_target": null,
+      "disable_torque_on_disconnect": true,
+      "position_p_coefficient": 16,
+      "position_i_coefficient": 0,
+      "position_d_coefficient": 32,
+      "cameras": {
+        "top": {
+          "type": "opencv",
+          "index_or_path": "/dev/v4l/by-path/pci-0000:00:14.0-usb-0:14.3:1.4-video-index0",
+          "width": 640,
+          "height": 480,
+          "fps": 30,
+          "fourcc": "MJPG",
+          "color_mode": "rgb"
+        },
+        "wrist": {
+          "type": "opencv",
+          "index_or_path": "/dev/v4l/by-id/usb-Sonix_Technology_Co.__Ltd._UGREEN_Camera_2K_SN0001-video-index0",
+          "width": 640,
+          "height": 480,
+          "fps": 30,
+          "fourcc": "MJPG",
+          "color_mode": "rgb"
+        }
+      }
+    },
+    "teleop": {
+      "type": "so101_leader",
+      "port": "/dev/serial/by-id/usb-1a86_USB_Single_Serial_5AAF220248-if00",
+      "id": "my_awesome_leader_arm",
+      "calibration_dir": "/home/pangk/workspaces/so101-training/data/calibration/replacement-leader-20261014-185158/leader",
+      "use_degrees": true
+    },
+    "dataset": {
+      "repo_id": "local/so101_stack_white_on_red_batch_002",
+      "root": "/home/pangk/workspaces/so101-training/data/datasets/so101_stack_white_on_red_batch_002",
+      "single_task": "抓起白色积木，叠在红色积木上，再松开夹爪。",
+      "fps": 30,
+      "episode_time_s": 120,
+      "reset_time_s": 0,
+      "num_episodes": 2,
+      "video": true,
+      "push_to_hub": false,
+      "no_stamp": true,
+      "streaming_encoding": true,
+      "encoder_threads": 2,
+      "encoder_queue_maxsize": 30,
+      "num_image_writer_processes": 0,
+      "num_image_writer_threads_per_camera": 0,
+      "video_encoding_batch_size": 1,
+      "rgb_encoder": {
+        "vcodec": "h264",
+        "pix_fmt": "yuv420p",
+        "g": 2,
+        "crf": 23,
+        "preset": "ultrafast"
+      }
+    },
+    "display_data": false,
+    "play_sounds": false,
+    "resume": false
+  },
+  "session": {
+    "fps": 30,
+    "countdown_s": 2.0,
+    "alignment_deg": 5.0,
+    "alignment_gripper": 5.0,
+    "settle_s": 0.5,
+    "settle_timeout_s": 5.0,
+    "max_tick_gap_s": 0.5,
+    "tracking_error_deg": 15.0,
+    "tracking_error_gripper": 20.0,
+    "tracking_timeout_s": 0.5,
+    "home": "data/motion_profiles/stack_white_on_red_home_v1.json",
+    "reset_min_duration_s": 2.0,
+    "reset_max_velocity_deg_s": 10.0,
+    "reset_max_acceleration_deg_s2": 20.0,
+    "reset_max_velocity_gripper_s": 10.0,
+    "reset_max_acceleration_gripper_s2": 20.0
+  }
+}

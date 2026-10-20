@@ -1,0 +1,59 @@
+{
+  "robot": {
+    "type": "so101_follower",
+    "port": "/dev/serial/by-id/usb-1a86_USB_Single_Serial_5AB9065574-if00",
+    "id": "my_awesome_follower_arm",
+    "calibration_dir": "/home/pangk/workspaces/so101-training/data/calibration/recalibration-20261014-152423-manual/follower",
+    "use_degrees": true,
+    "max_relative_target": null,
+    "disable_torque_on_disconnect": true,
+    "position_p_coefficient": 16,
+    "position_i_coefficient": 0,
+    "position_d_coefficient": 32,
+    "cameras": {
+      "top": {
+        "type": "opencv",
+        "index_or_path": "/dev/v4l/by-path/pci-0000:00:14.0-usb-0:14.3:1.4-video-index0",
+        "width": 640,
+        "height": 480,
+        "fps": 30,
+        "fourcc": "MJPG",
+        "color_mode": "rgb",
+        "warmup_s": 3
+      },
+      "wrist": {
+        "type": "opencv",
+        "index_or_path": "/dev/v4l/by-id/usb-Sonix_Technology_Co.__Ltd._UGREEN_Camera_2K_SN0001-video-index0",
+        "width": 640,
+        "height": 480,
+        "fps": 30,
+        "fourcc": "MJPG",
+        "color_mode": "rgb",
+        "warmup_s": 3
+      }
+    },
+    "num_read_retries": 2
+  },
+  "teleop": null,
+  "policy": {
+    "path": "/home/pangk/workspaces/so101-training/outputs/train/act_stack_20261015_run01/checkpoints/080000/pretrained_model"
+  },
+  "strategy": {
+    "type": "base"
+  },
+  "inference": {
+    "type": "sync"
+  },
+  "dataset": null,
+  "fps": 30,
+  "duration": 60,
+  "interactive": false,
+  "interpolation_multiplier": 1,
+  "device": "cuda",
+  "task": "抓起白色积木，叠在红色积木上，再松开夹爪。",
+  "display_data": false,
+  "play_sounds": false,
+  "return_to_initial_position": false,
+  "use_torch_compile": false,
+  "rename_map": {}
+}

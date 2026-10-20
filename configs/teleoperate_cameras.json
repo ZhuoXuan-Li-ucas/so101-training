@@ -1,0 +1,40 @@
+{
+  "robot": {
+    "type": "so101_follower",
+    "port": "/dev/serial/by-id/usb-1a86_USB_Single_Serial_5AB9065574-if00",
+    "id": "my_awesome_follower_arm",
+    "calibration_dir": "/home/pangk/workspaces/so101-training/data/calibration/robots/so_follower",
+    "use_degrees": true,
+    "max_relative_target": 2.0,
+    "disable_torque_on_disconnect": true,
+    "cameras": {
+      "top": {
+        "type": "opencv",
+        "index_or_path": "/dev/v4l/by-path/pci-0000:00:14.0-usb-0:14.3:1.4-video-index0",
+        "width": 640,
+        "height": 480,
+        "fps": 30,
+        "fourcc": "MJPG"
+      },
+      "wrist": {
+        "type": "opencv",
+        "index_or_path": "/dev/v4l/by-id/usb-Sonix_Technology_Co.__Ltd._UGREEN_Camera_2K_SN0001-video-index0",
+        "width": 640,
+        "height": 480,
+        "fps": 30,
+        "fourcc": "MJPG"
+      }
+    }
+  },
+  "teleop": {
+    "type": "so101_leader",
+    "port": "/dev/serial/by-id/usb-1a86_USB_Single_Serial_5B79050214-if00",
+    "id": "my_awesome_leader_arm",
+    "calibration_dir": "/home/pangk/workspaces/so101-training/data/calibration/teleoperators/so_leader",
+    "use_degrees": true
+  },
+  "fps": 30,
+  "display_data": true,
+  "display_mode": "rerun",
+  "display_compressed_images": true
+}

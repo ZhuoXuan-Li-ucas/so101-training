@@ -1,0 +1,22 @@
+{
+  "folders": [
+    { "name": "SO-101 training", "path": "." }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "/home/pangk/miniforge3/envs/lerobot-so101/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "python.analysis.extraPaths": ["${workspaceFolder}/lerobot/src"],
+    "files.watcherExclude": {
+      "**/.cache/**": true,
+      "**/.tools/**": true,
+      "**/outputs/**": true,
+      "**/data/**": true
+    },
+    "search.exclude": {
+      "**/.cache": true,
+      "**/.tools": true,
+      "**/outputs": true,
+      "**/data": true
+    }
+  }
+}

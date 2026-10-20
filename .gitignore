@@ -1,0 +1,58 @@
+# Local datasets, calibration, model artifacts, and generated reports
+/data/
+/dataset/
+/datasets/
+/outputs/
+/logs/
+/model/
+/models/
+/checkpoints/
+
+# Dataset files and model weights at any depth
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.tflite
+*.h5
+*.hdf5
+*.bin
+*.parquet
+*.arrow
+*.memmap
+*.bag
+
+# Upstream test data and model fixtures; retain their Python generators
+/lerobot/tests/artifacts/**
+!/lerobot/tests/artifacts/**/
+!/lerobot/tests/artifacts/**/*.py
+
+# Local caches, tools, and proxy configuration
+.cache/
+/.tools/
+/.local-proxy/
+
+# Python environments, caches, and build artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Local credentials and editor files
+.env
+.env.*
+!.env.example
+!.env.template
+.vscode/
+.idea/
+*.swp
+.DS_Store

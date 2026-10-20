@@ -1,0 +1,11 @@
+name: lerobot-so101
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - ffmpeg=7.1.1
+  - uv
+
+# LeRobot is installed separately from lerobot/uv.lock with the
+# feetech, training, and core_scripts extras, into this Conda environment.
